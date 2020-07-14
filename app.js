@@ -2,6 +2,7 @@ const api_key = "$api_key=50d57945-64d7-4f99-9bb3-46d5026782fb"
 const url = 'https://api.thecatapi.com/v1/images/search?mime_types=jpg&format=landscape' + api_key;
 const quotes ='https://api.kanye.rest/'
 const title = './title.json'
+const brit = './british.json'
 
 
 
@@ -45,9 +46,24 @@ async function getTitle(){
 
 }
 
+async function getEng(){
+  const response = await fetch(brit);
+  const bData = await response.json();
+  const engRandom = Math.floor(Math.random()*bData.length);
+
+
+  document.getElementById("eng").innerHTML=`
+    
+  ${bData[engRandom].english} !
+
+  `
+
+}
+
 
 
 getKitty()
 getQuote()
 getTitle()
+getEng()
 
