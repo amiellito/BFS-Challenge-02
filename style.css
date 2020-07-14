@@ -38,6 +38,7 @@ html, body{
 }
 
 
+
 /* TOP */
 
 
@@ -196,6 +197,7 @@ width:200px;
 /* POSTER STYLING */
 
 .app-container{
+  max-width: 900px;
   margin: 1em auto;
   display: flex;
   flex-direction: column;
@@ -203,7 +205,6 @@ width:200px;
   align-items: center;
   background-color: hsl(0, 0%, 10%);
   box-shadow: 2px 8px 24px -5px rgba(0,0,0,0.5);
-  width: 50vw;
   padding: 3em;
   color: white;
 }
@@ -228,6 +229,7 @@ width:200px;
   width: 100%;
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 
 .img-container{
@@ -245,4 +247,92 @@ width:200px;
 
 #quote{
   text-align: center;
+}
+
+@media screen and (max-width: 1200px){
+  .container{
+    flex-direction: column;
+  }
+
+  .main-nav{
+    position: fixed;
+    top: 0;
+    flex-direction: row;
+    height: 100px;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .submit{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .social{
+    position: fixed;
+    bottom: 10px;
+    right: 40px;
+  }
+
+  .right-main{
+    position: fixed;
+    left: 40px;
+    bottom: 10px;
+    z-index: 100;
+  }
+
+  .left-main{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .left-main p{
+    font-size: 1em;
+  }
+
+  .description{
+    width: 40%;
+    margin-left: auto;
+  }
+
+  .left-main hr{
+    display: none;
+  }
+
+  .app-container{
+    margin-top: 100px;
+  }
+
+  .main-image{
+    width: 70px;
+    height: 70px;
+  }
+
+  .fun-text{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .right-main, .social, .description{
+    display: none;
+  }
+
+  .left-main{
+    justify-content: center;
+  }
+
+  #title{
+    font-size: 1.5em;
+  }
+
+  #quote{
+    font-size: 1em;
+  }
 }
