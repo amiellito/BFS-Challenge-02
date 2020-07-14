@@ -45,7 +45,7 @@ html, body{
   margin: 0 auto;
   padding: 1em;
   width: 400px;
-  height: 600px;
+  height: 650px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -116,6 +116,22 @@ hr{
   align-self: center;
   border: 5px solid white;
   box-shadow: 2px 8px 24px -5px rgba(0,0,0,0.5);
+}
+
+.social{
+  margin-top: 60px;
+  font-size: 2.5em;
+  
+}
+
+.social .fab{
+  color: hsl(0, 0%, 50%);
+}
+
+
+.social .fab:hover{
+  color: hsl(0, 0%, 30%);
+  cursor: pointer;
 }
 
 .submit{
