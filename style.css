@@ -16,7 +16,7 @@ h1, h2, h3, h4, blockquote, q, .maia-nav ul {
   
 }
 
-p{
+p, a {
   font-family: 'Montserrat', sans-serif;
   font-size: 30px;
 }
@@ -25,7 +25,11 @@ html, body{
   background-color: #dedede;
 }
 
-
+a{
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+}
 
 /* CONTAINER */
 
@@ -146,6 +150,23 @@ hr{
 .fas{
   margin-right: 10px;
   font-size: 1.5em;
+}
+
+button{
+  padding: 1em 4em;
+  margin: 1em;
+  border-radius: 1em;
+  border: none;
+  font-size: 1em;
+  cursor: pointer; 
+}
+
+#yes{
+  background-color: green;
+}
+
+#no{
+  background-color: orange;
 }
 
 .myButton {
