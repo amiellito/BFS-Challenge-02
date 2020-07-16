@@ -133,12 +133,15 @@ hr{
 
 .social .fab{
   color: hsl(0, 0%, 50%);
+  transition: 100ms ease;
 }
 
 
 .social .fab:hover{
   color: hsl(0, 0%, 30%);
   cursor: pointer;
+  transform: scale(1.1);
+  z-index: 100;
 }
 
 .submit{
@@ -311,6 +314,10 @@ width:200px;
     flex-direction: column;
   }
 
+  .app-vote{
+    margin-top: 6em;
+  }
+
   .main-nav{
     position: fixed;
     top: 0;
@@ -381,6 +388,11 @@ width:200px;
   
    .social, .description{
     display: none;
+  }
+
+  .app-vote{
+    margin-top: 4em;
+    z-index: 1;
   }
 
   .main-nav{
