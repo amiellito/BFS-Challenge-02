@@ -185,6 +185,7 @@ button:hover{
   flex-direction: column;
   justify-content: start;
   align-items: flex-end;
+  z-index: 1;
   flex: 1;
 }
 
