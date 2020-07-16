@@ -29,6 +29,7 @@ fetch(url)
     
       //Create Object
 
+
       var vData = { 
         "image_id": data[0].id,
         "sub_id": "guest_user",
@@ -59,8 +60,6 @@ fetch(url)
 
     }
     )
-
-
 
 
 fetch(quotes)
@@ -124,10 +123,10 @@ fetch(brit)
 // voteObj.value = voteValue;
 
 
+/////////////////////////////////
 
 
-
-
+//**** GET THE VOTES ********//
 
 
 
