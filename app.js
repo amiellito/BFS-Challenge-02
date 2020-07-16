@@ -1,8 +1,9 @@
 const api_key = "$api_key=50d57945-64d7-4f99-9bb3-46d5026782fb"
-const url = 'https://api.thecatapi.com/v1/images/search?mime_types=jpg&format=landscape';
+const url = 'https://api.thecatapi.com/v1/images/search?mime_types=jpg&format=horizontal';
 const quotes ='https://api.kanye.rest/'
 const title = './title.json'
 const brit = './british.json'
+
 
 
 fetch(url)
@@ -10,6 +11,8 @@ fetch(url)
   .then(data => 
     {
     document.getElementById("app").innerHTML=`<img  class="img-container" src="${data[0].url}">`
+
+      //Voting
 
       function yes(){
         vote = 1;
@@ -21,14 +24,20 @@ fetch(url)
 
       document.getElementById("yes").onclick = yes();
       document.getElementById("no").onclick = no();
+
+
     
       //Create Object
 
-      const vData = { 
+      var vData = { 
         "image_id": data[0].id,
         "sub_id": "guest_user",
         "value": vote
        };
+
+       
+
+      //Send Votes
 
 
       fetch('https://api.thecatapi.com/v1/votes?', {
@@ -114,11 +123,6 @@ fetch(brit)
 // voteObj.sub_id = "guest_user";
 // voteObj.value = voteValue;
 
-
-// console.log(voteObj);
-
-// console.log("vote object: " + JSON.stringify(voteObj));
-// console.log(url);
 
 
 
